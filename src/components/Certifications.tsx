@@ -26,12 +26,12 @@ const Certifications = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-card">
+    <section className="py-12 px-6 bg-gradient-to-b from-background to-card animate-fade-in">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
           Professional Certifications
         </h2>
-        <p className="text-muted-foreground mb-12 max-w-4xl">
+        <p className="text-muted-foreground mb-6 max-w-4xl">
           Continuously expanding technical knowledge through industry-recognized certifications in cloud computing, 
           cybersecurity, and emerging technologies. These credentials demonstrate commitment to excellence and staying 
           current with evolving IT landscapes.
@@ -41,7 +41,7 @@ const Certifications = () => {
           {certs.map((cert, index) => (
             <Card 
               key={index} 
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 p-8"
+              className="bg-card border-border hover:border-primary/50 hover:scale-105 transition-all duration-300 p-6"
             >
               <div className="bg-primary/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                 <div className="text-primary">{cert.icon}</div>

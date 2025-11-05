@@ -21,9 +21,9 @@ const Training = () => {
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 px-6 animate-fade-in">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-4">
           DevOps Training Experience
         </h2>
 
@@ -42,11 +42,11 @@ const Training = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-3 gap-6 mt-8">
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="bg-card border-border p-6 hover:border-primary/50 transition-all duration-300"
+              className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300"
             >
               <div className="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
                 <div className="text-primary">{skill.icon}</div>

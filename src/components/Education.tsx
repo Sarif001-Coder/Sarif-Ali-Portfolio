@@ -2,13 +2,13 @@ import officeScene from "@/assets/office-scene.png";
 
 const Education = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-card">
+    <section className="py-12 px-6 bg-gradient-to-b from-background to-card animate-fade-in">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-12">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-8">
           Academic Background
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-8">
             {/* Master's Degree */}
             <div className="relative pl-6 border-l-2 border-primary">

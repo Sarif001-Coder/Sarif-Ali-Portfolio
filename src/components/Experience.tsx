@@ -3,14 +3,14 @@ import { Briefcase, Server, Database, Activity, Users } from "lucide-react";
 
 const Experience = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-card">
-      <div className="max-w-7xl mx-auto space-y-20">
+    <section className="py-12 px-6 bg-gradient-to-b from-background to-card animate-fade-in">
+      <div className="max-w-7xl mx-auto space-y-10">
         {/* Current Role */}
         <div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-12">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Current Leadership Role
           </h2>
-          <Card className="bg-card border-border p-8">
+          <Card className="bg-card border-border p-6 hover:border-primary/50 transition-all duration-300">
             <div className="flex items-center gap-4 mb-6">
               <div className="bg-primary/20 w-14 h-14 rounded-full flex items-center justify-center">
                 <Briefcase className="h-7 w-7 text-primary" />
@@ -33,7 +33,7 @@ const Experience = () => {
 
         {/* Capgemini Experience */}
         <div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
             Capgemini Experience
           </h2>
           <p className="text-xl text-primary mb-2">Associate Software Engineer</p>
@@ -43,7 +43,7 @@ const Experience = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="bg-card border-border p-6">
+            <Card className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Server className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">Infrastructure Management</h3>
@@ -55,7 +55,7 @@ const Experience = () => {
               </p>
             </Card>
 
-            <Card className="bg-card border-border p-6">
+            <Card className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Database className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">Backup & Recovery</h3>
@@ -67,7 +67,7 @@ const Experience = () => {
               </p>
             </Card>
 
-            <Card className="bg-card border-border p-6">
+            <Card className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Activity className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">24/7 Monitoring Operations</h3>
@@ -78,7 +78,7 @@ const Experience = () => {
               </p>
             </Card>
 
-            <Card className="bg-card border-border p-6">
+            <Card className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Server className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">WebSphere Administration</h3>
@@ -89,7 +89,7 @@ const Experience = () => {
               </p>
             </Card>
 
-            <Card className="bg-card border-border p-6">
+            <Card className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Database className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">Reporting & Documentation</h3>
@@ -100,7 +100,7 @@ const Experience = () => {
               </p>
             </Card>
 
-            <Card className="bg-card border-border p-6">
+            <Card className="bg-card border-border p-5 hover:border-primary/50 hover:scale-105 transition-all duration-300">
               <div className="flex items-center gap-3 mb-4">
                 <Users className="h-6 w-6 text-primary" />
                 <h3 className="text-xl font-bold">Client Collaboration</h3>

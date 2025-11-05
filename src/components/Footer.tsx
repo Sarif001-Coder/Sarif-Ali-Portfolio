@@ -2,7 +2,7 @@ import { Linkedin, Github, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-6 border-t border-border">
+    <footer className="py-8 px-6 border-t border-border animate-fade-in">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>

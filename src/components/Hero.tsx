@@ -4,8 +4,8 @@ import { Linkedin, Github } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen flex items-center justify-center px-6 py-12">
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-8 items-center animate-fade-in">
         {/* Left: Cloud Server Illustration */}
         <div className="relative animate-float">
           <div className="bg-gradient-to-br from-card to-background p-8 rounded-2xl border border-border">

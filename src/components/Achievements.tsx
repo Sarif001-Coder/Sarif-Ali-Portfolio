@@ -3,20 +3,20 @@ import guitarPlayer from "@/assets/guitar-player.png";
 
 const Achievements = () => {
   return (
-    <section className="py-20 px-6">
+    <section className="py-12 px-6 animate-fade-in">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-16">
+        <h2 className="text-3xl lg:text-4xl font-bold mb-8">
           Recognition & Achievements
         </h2>
 
         <div className="grid lg:grid-cols-3 gap-8 items-start">
           {/* Best Soft Skills Presenter */}
           <div className="space-y-6">
-            <div className="bg-card border border-border rounded-2xl p-6 overflow-hidden">
+            <div className="bg-card border border-border rounded-2xl p-4 overflow-hidden hover:scale-105 transition-transform duration-300">
               <img 
                 src={abstractShapes} 
                 alt="Abstract geometric shapes" 
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-40 object-cover rounded-lg"
               />
             </div>
             <div>
@@ -40,11 +40,11 @@ const Achievements = () => {
 
           {/* Guitar Enthusiast */}
           <div className="space-y-6">
-            <div className="bg-card border border-border rounded-2xl p-6 overflow-hidden">
+            <div className="bg-card border border-border rounded-2xl p-4 overflow-hidden hover:scale-105 transition-transform duration-300">
               <img 
                 src={guitarPlayer} 
                 alt="Guitar player silhouette" 
-                className="w-full h-48 object-cover rounded-lg"
+                className="w-full h-40 object-cover rounded-lg"
               />
             </div>
             <div>
