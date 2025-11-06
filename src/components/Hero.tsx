@@ -1,16 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Mail, MapPin } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
-
 const Hero = () => {
-  const { ref, isVisible } = useIntersectionObserver();
-  
-  return (
-    <section 
-      id="home"
-      ref={ref} 
-      className={`min-h-screen flex items-center justify-center px-6 pt-24 pb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-    >
+  const {
+    ref,
+    isVisible
+  } = useIntersectionObserver();
+  return <section id="home" ref={ref} className={`min-h-screen flex items-center justify-center px-6 pt-24 pb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl w-full text-center space-y-8">
         {/* Profile Image */}
         <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-background border-4 border-primary/30 overflow-hidden mb-8 hover:scale-105 transition-transform duration-300">
@@ -59,32 +55,15 @@ const Hero = () => {
 
         {/* Social Links */}
         <div className="flex gap-4 justify-center pt-4">
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow font-semibold"
-            asChild
-          >
-            <a 
-              href="https://www.linkedin.com/in/shaikh-sarif-ali" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow font-semibold" asChild>
+            <a href="https://www.linkedin.com/in/shaikh-sarif-ali" target="_blank" rel="noopener noreferrer">
               <Linkedin className="mr-2 h-5 w-5" />
               LinkedIn
             </a>
           </Button>
           
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
-            asChild
-          >
-            <a 
-              href="https://github.com/shaikhsarifali" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
+          <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold" asChild>
+            <a href="https://github.com/shaikhsarifali" target="_blank" rel="noopener noreferrer">
               <Github className="mr-2 h-5 w-5" />
               GitHub
             </a>
@@ -92,14 +71,8 @@ const Hero = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="pt-12 animate-bounce">
-          <div className="w-6 h-10 mx-auto border-2 border-primary/50 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-2 bg-primary rounded-full"></div>
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
