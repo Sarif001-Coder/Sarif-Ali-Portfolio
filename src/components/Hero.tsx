@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Linkedin, Github, Mail, MapPin } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
+import profileImage from "@/assets/profile.jpg";
 const Hero = () => {
   const {
     ref,
@@ -9,10 +10,12 @@ const Hero = () => {
   return <section id="home" ref={ref} className={`min-h-screen flex items-center justify-center px-6 pt-24 pb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl w-full text-center space-y-8">
         {/* Profile Image */}
-        <div className="w-48 h-48 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-background border-4 border-primary/30 overflow-hidden mb-8 hover:scale-105 transition-transform duration-300">
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-6xl font-bold text-primary">SA</span>
-          </div>
+        <div className="w-48 h-48 mx-auto rounded-full border-4 border-primary/30 overflow-hidden mb-8 hover:scale-105 transition-transform duration-300">
+          <img 
+            src={profileImage} 
+            alt="Shaikh Sarif Ali - DevOps Engineer" 
+            className="w-full h-full object-cover"
+          />
         </div>
 
         {/* Name */}

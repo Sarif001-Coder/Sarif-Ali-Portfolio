@@ -1,6 +1,7 @@
 import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 import { Button } from "@/components/ui/button";
 import { FileText, Briefcase } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 
 const About = () => {
   const { ref, isVisible } = useIntersectionObserver();
@@ -57,18 +58,14 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right: Profile Image Placeholder */}
+          {/* Right: Profile Image */}
           <div className="relative">
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-background border-2 border-primary/30 overflow-hidden">
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="text-center space-y-4 p-8">
-                  <div className="w-32 h-32 mx-auto rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center">
-                    <span className="text-5xl font-bold text-primary">SA</span>
-                  </div>
-                  <p className="text-muted-foreground">DevOps Engineer</p>
-                  <p className="text-sm text-muted-foreground">Cloud Infrastructure Specialist</p>
-                </div>
-              </div>
+            <div className="aspect-square rounded-2xl border-2 border-primary/30 overflow-hidden">
+              <img 
+                src={profileImage} 
+                alt="Shaikh Sarif Ali - DevOps Engineer and Cloud Infrastructure Specialist" 
+                className="w-full h-full object-cover"
+              />
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary/10 rounded-2xl -z-10"></div>
