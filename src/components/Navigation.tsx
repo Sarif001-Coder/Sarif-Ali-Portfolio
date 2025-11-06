@@ -3,7 +3,9 @@ import { Moon, Sun } from "lucide-react";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("home");
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(() => {
+    return document.documentElement.classList.contains("dark");
+  });
 
   useEffect(() => {
     const handleScroll = () => {
