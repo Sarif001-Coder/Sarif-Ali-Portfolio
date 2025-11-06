@@ -10,22 +10,14 @@ const Hero = () => {
   return <section id="home" ref={ref} className={`min-h-screen flex items-center justify-center px-6 pt-24 pb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl w-full text-center space-y-8">
         {/* Profile Image */}
-        <div className="w-48 h-48 mx-auto rounded-full border-4 border-primary/30 overflow-hidden mb-8 hover:scale-105 transition-transform duration-300">
-          <img 
-            src={profileImage} 
-            alt="Shaikh Sarif Ali - DevOps Engineer" 
-            className="w-full h-full object-cover"
-          />
-        </div>
+        
 
         {/* Name */}
         <div className="space-y-2">
           <h1 className="text-6xl lg:text-8xl font-bold tracking-tight">
             Shaikh
           </h1>
-          <h2 className="text-5xl lg:text-7xl font-bold text-primary">
-            Sarif Ali
-          </h2>
+          <h2 className="text-5xl lg:text-7xl font-bold text-primary">Sarif Ali</h2>
         </div>
 
         {/* Tagline */}
