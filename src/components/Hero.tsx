@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import cloudServer from "@/assets/cloud-server.png";
 import { Linkedin, Github } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const Hero = () => {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-12">
+    <section ref={ref} className={`min-h-screen flex items-center justify-center px-6 py-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-8 items-center animate-fade-in">
         {/* Left: Cloud Server Illustration */}
         <div className="relative animate-float">

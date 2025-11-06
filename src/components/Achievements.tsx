@@ -1,9 +1,12 @@
 import abstractShapes from "@/assets/abstract-shapes.png";
 import guitarPlayer from "@/assets/guitar-player.png";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const Achievements = () => {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   return (
-    <section className="py-12 px-6 animate-fade-in">
+    <section ref={ref} className={`py-12 px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold mb-8">
           Recognition & Achievements

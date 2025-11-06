@@ -1,8 +1,11 @@
 import { Linkedin, Github, Mail } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const Footer = () => {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   return (
-    <footer className="py-8 px-6 border-t border-border animate-fade-in">
+    <footer ref={ref} className={`py-8 px-6 border-t border-border transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>

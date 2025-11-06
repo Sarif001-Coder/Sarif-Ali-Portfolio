@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { GitBranch, Cloud, Cog } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const Training = () => {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   const skills = [
     {
       icon: <GitBranch className="h-6 w-6" />,
@@ -21,7 +24,7 @@ const Training = () => {
   ];
 
   return (
-    <section className="py-12 px-6 animate-fade-in">
+    <section ref={ref} className={`py-12 px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
           DevOps Training Experience

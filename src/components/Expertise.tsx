@@ -1,7 +1,10 @@
 import cloudServer from "@/assets/cloud-server.png";
 import { Server, GitBranch, Cloud, Globe } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const Expertise = () => {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   const skills = [
     { icon: <Server className="h-5 w-5" />, text: "Functional Deployment" },
     { icon: <GitBranch className="h-5 w-5" />, text: "GitHub Version Control" },
@@ -17,7 +20,7 @@ const Expertise = () => {
   ];
 
   return (
-    <section className="py-12 px-6 animate-fade-in">
+    <section ref={ref} className={`py-12 px-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">
           Professional Expertise

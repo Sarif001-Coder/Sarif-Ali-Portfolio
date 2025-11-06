@@ -1,7 +1,10 @@
 import { Card } from "@/components/ui/card";
 import { Cpu, Shield, Grid, Cloud } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/use-intersection-observer";
 
 const Certifications = () => {
+  const { ref, isVisible } = useIntersectionObserver();
+  
   const certs = [
     {
       icon: <Cpu className="h-8 w-8" />,
@@ -26,7 +29,7 @@ const Certifications = () => {
   ];
 
   return (
-    <section className="py-12 px-6 bg-gradient-to-b from-background to-card animate-fade-in">
+    <section ref={ref} className={`py-12 px-6 bg-gradient-to-b from-background to-card transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl lg:text-4xl font-bold mb-4">
           Professional Certifications
